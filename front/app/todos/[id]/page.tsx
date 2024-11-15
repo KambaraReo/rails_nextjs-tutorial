@@ -6,6 +6,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import Todo from '@/components/Todo';
 import { TodoType } from '@/types/Todo';
+import DeleteTodoButton from '@/components/DeleteTodoButton';
 
 // Todo詳細ページを表示するコンポーネント
 const TodoDetailPage = () => {
@@ -60,6 +61,7 @@ const TodoDetailPage = () => {
           >
             Back
           </Link>
+          {todo && <DeleteTodoButton id={todo.id} />}
         </div>
       </div>
     </div>
