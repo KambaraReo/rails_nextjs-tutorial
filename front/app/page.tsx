@@ -1,9 +1,8 @@
-import Todos from '@/components/Todos';
+import { redirect } from 'next/navigation';
 
 export default function Home() {
-  return (
-    <div className="flex flex-col justify-center items-center">
-      <Todos />
-    </div>
-  );
+  redirect('/todos');
+
+  // リダイレクトが発生するため、この部分は実行されない
+  return null;
 }
