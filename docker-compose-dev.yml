@@ -29,7 +29,6 @@ services:
       - ${NEXTJS_PORT}:3001
     volumes:
       - ./front:/myapp
-      - front_node_modules:/myapp/node_modules
     depends_on:
       - api
     environment:
@@ -56,4 +55,3 @@ services:
 volumes:
   mysql-data:
   gem_data:
-  front_node_modules:

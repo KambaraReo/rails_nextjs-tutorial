@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+test_data_count = 3
+
+test_data_count.times do |i|
+  Todo.create(title: "Todo #{i+1}", content: "Todo #{i+1} の内容")
+end
